@@ -107,8 +107,7 @@ class Address_Dict:
         :param num: 抽出する数
         :return: ランダムに抽出した住所のリスト
         """
-        self.df = self.df.sample(num)
-        return self.df['住所文字列'].values
+        return self.df.sample(num)['住所文字列'].values
 
     def office_search(self, word):
         """事業所を検索
